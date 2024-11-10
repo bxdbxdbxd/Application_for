@@ -1,6 +1,10 @@
 <FirstScreen>:
     FloatLayout:
-        background: 50, 50 ,50
+        canvas:
+            Rectangle:
+                source: 'bg_for_menu.jpg'
+                size: self.size
+                pos: self.pos
         orientation: 'vertical'
         Button:
             size_hint: 0.2, 0.05
@@ -13,11 +17,26 @@
             orientation: 'vertical'
             size_hint: 0.85, 0.3
             Button:
-                text: '1'
+                id: 1_object
+                background_normal: ''
+                background_color: .3, .3, .4, .85
+                text: 'Тц Эдем'
+                font_name: 'Roboto-Regular.ttf'
+                font_size: 65
             Button:
-                text: '2'
+                id: 2_object
+                background_normal: ''
+                background_color: .3, .3, .4, .85
+                text: 'Тц Адам'
+                font_name: 'Roboto-Regular.ttf'
+                font_size: 65
             Button:
-                text: '3'
+                id: 3_object
+                background_normal: ''
+                background_color: .3, .3, .4, .85
+                text: 'Парк'
+                font_name: 'Roboto-Regular.ttf'
+                font_size: 65
 
 
 <SecondScreen>:
