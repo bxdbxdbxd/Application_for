@@ -1,0 +1,27 @@
+<FirstScreen>:
+    FloatLayout:
+        background: 50, 50 ,50
+        orientation: 'vertical'
+        Button:
+            size_hint: 0.2, 0.05
+            pos: 690, 1050
+            text: 'Add'
+            on_press: pass
+        BoxLayout:
+            spacing: 10
+            pos: 60, 600
+            orientation: 'vertical'
+            size_hint: 0.85, 0.3
+            Button:
+                text: '1'
+            Button:
+                text: '2'
+            Button:
+                text: '3'
+
+
+<SecondScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'Второй экран'
