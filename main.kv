@@ -23,6 +23,9 @@
                 text: 'Тц Эдем'
                 font_name: 'Roboto-Regular.ttf'
                 font_size: 65
+                on_press:
+                    root.manager.transition.direction = 'left'
+                    root.manager.current = 'first_object'
             Button:
                 id: 2_object
                 background_normal: ''
@@ -30,6 +33,9 @@
                 text: 'Тц Адам'
                 font_name: 'Roboto-Regular.ttf'
                 font_size: 65
+                on_press:
+                    root.manager.transition.direction = 'left'
+                    root.manager.current = 'second_object'
             Button:
                 id: 3_object
                 background_normal: ''
@@ -37,10 +43,41 @@
                 text: 'Парк'
                 font_name: 'Roboto-Regular.ttf'
                 font_size: 65
+                on_press:
+                    root.manager.transition.direction = 'left'
+                    root.manager.current = 'third_object'
 
 
-<SecondScreen>:
-    BoxLayout:
+<ObjectFirstScreen>:
+    FloatLayout:
         orientation: 'vertical'
-        Label:
-            text: 'Второй экран'
+        Button:
+            size_hint: 0.2, 0.05
+            pos: 690, 1050
+            text: 'Назад'
+            on_press:
+                root.manager.transition.direction = 'right'
+                root.manager.current = 'menu'
+
+<ObjectSecondScreen>:
+    FloatLayout:
+        orientation: 'vertical'
+        Button:
+            size_hint: 0.2, 0.05
+            pos: 690, 1050
+            text: 'Назад'
+            on_press:
+                root.manager.transition.direction = 'right'
+                root.manager.current = 'menu'
+
+
+<ObjectThirdScreen>:
+    FloatLayout:
+        orientation: 'vertical'
+        Button:
+            size_hint: 0.2, 0.05
+            pos: 690, 1050
+            text: 'Назад'
+            on_press:
+                root.manager.transition.direction = 'right'
+                root.manager.current = 'menu'
