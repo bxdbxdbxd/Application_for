@@ -7,9 +7,13 @@
                 pos: self.pos
         orientation: 'vertical'
         Button:
+            background_normal: ''
+            background_color: .3, .3, .4, .85
             size_hint: 0.2, 0.05
-            pos: 590, 950
-            text: 'Add'
+            pos_hint: {'x': 0.78, 'y': 0.93}
+            text: '+'
+            font_name: 'Roboto-Regular.ttf'
+            font_size: 35
             on_press: pass
         BoxLayout:
             spacing: 10
@@ -60,7 +64,18 @@
             background_normal: ''
             background_color: .3, .3, .4, .85
             size_hint: 0.2, 0.05
-            pos: 590, 950
+            pos_hint: {'x': 0.78, 'y': 0.93}
+            text: '+'
+            font_name: 'Roboto-Regular.ttf'
+            font_size: 35
+            on_press:
+                root.manager.transition.direction = 'left'
+                root.manager.current = 'add_estimates'
+        Button:
+            background_normal: ''
+            background_color: .3, .3, .4, .85
+            size_hint: 0.2, 0.05
+            pos_hint: {'x': 0.02, 'y': 0.93}
             text: 'Назад'
             font_name: 'Roboto-Regular.ttf'
             font_size: 35
@@ -87,7 +102,17 @@
             background_normal: ''
             background_color: .3, .3, .4, .85
             size_hint: 0.2, 0.05
-            pos: 590, 950
+            pos_hint: {'x': 0.78, 'y': 0.93}
+            text: '+'
+            font_name: 'Roboto-Regular.ttf'
+            font_size: 35
+            on_press:
+                root.manager.transition.direction = 'left'
+        Button:
+            background_normal: ''
+            background_color: .3, .3, .4, .85
+            size_hint: 0.2, 0.05
+            pos_hint: {'x': 0.02, 'y': 0.93}
             text: 'Назад'
             font_name: 'Roboto-Regular.ttf'
             font_size: 35
@@ -108,10 +133,45 @@
             background_normal: ''
             background_color: .3, .3, .4, .85
             size_hint: 0.2, 0.05
-            pos: 590, 950
+            pos_hint: {'x': 0.78, 'y': 0.93}
+            text: '+'
+            font_name: 'Roboto-Regular.ttf'
+            font_size: 35
+            on_press:
+                root.manager.transition.direction = 'left'
+        Button:
+            background_normal: ''
+            background_color: .3, .3, .4, .85
+            size_hint: 0.2, 0.05
+            pos_hint: {'x': 0.02, 'y': 0.93}
             text: 'Назад'
             font_name: 'Roboto-Regular.ttf'
             font_size: 35
             on_press:
                 root.manager.transition.direction = 'right'
                 root.manager.current = 'menu'
+<AddEstimates>:
+    FloatLayout:
+        orientation: 'vertical'
+        canvas:
+            Rectangle:
+                source: 'bg_for_menu.jpg'
+                size: self.size
+                pos: self.pos
+        Label:
+            text: 'Смета'
+            font_name: 'Roboto-Regular.ttf'
+            font_size: 75
+            size_hint: 0.8, 0.8
+            pos_hint: {'x': 0.1, 'y': 0.53}
+        Button:
+            background_normal: ''
+            background_color: .3, .3, .4, .85
+            size_hint: 0.2, 0.05
+            pos_hint: {'x': 0.02, 'y': 0.93}
+            text: 'Назад'
+            font_name: 'Roboto-Regular.ttf'
+            font_size: 35
+            on_press:
+                root.manager.transition.direction = 'right'
+                root.manager.current = 'first_object'
